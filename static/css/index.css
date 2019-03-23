@@ -1,0 +1,9 @@
+body {
+  font-family: "Nunito", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pr-social-icon {
+  padding: 0em 0.25em;
+}
