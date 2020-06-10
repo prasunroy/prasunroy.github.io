@@ -1,119 +1,201 @@
+<!------------------------------------------------------------------------------
+The following source code is available under Creative Commons Attribution 4.0
+International (CC BY 4.0) Public License. To use this source code in your own
+projects, just add a link back to my website (https://prasunroy.github.io).
+------------------------------------------------------------------------------->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <!-- Primary metadata -->
   <meta charset="utf-8">
   <meta name="author" content="Prasun Roy">
-  <meta name="description" content="Personal Website of Prasun Roy">
-  <meta name="keywords" content="Prasun, Roy, Personal, Website">
+  <meta name="description" content="Research Engineer @ CVPR Unit, Indian Statistical Institute.">
+  <meta name="keywords" content="Prasun Roy, Personal Website">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prasun Roy | Home</title>
-  <link rel="icon" type="image/x-icon" href="static/img/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito:300">
-  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-  <link rel="stylesheet" type="text/css" href="static/css/index.css">
+  <!-- Open Graph metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://prasunroy.github.io">
+  <meta property="og:title" content="Prasun Roy">
+  <meta property="og:description" content="Research Engineer @ CVPR Unit, Indian Statistical Institute.">
+  <meta property="og:image" content="https://prasunroy.github.io/static/imgs/preview.png">
+  <!-- Twitter metadata -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://prasunroy.github.io">
+  <meta property="twitter:title" content="Prasun Roy">
+  <meta property="twitter:description" content="Research Engineer @ CVPR Unit, Indian Statistical Institute.">
+  <meta property="twitter:image" content="https://prasunroy.github.io/static/imgs/preview.png">
+  <!-- Title -->
+  <title>Prasun Roy</title>
+  <!-- External resource links -->
+  <link rel="icon" type="image/x-icon" href="static/imgs/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto&display=swap">
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css">
+  <!-- Custom styles -->
+  <style type="text/css">
+    html, body {left: 0; top: 0; width: 100vw; height: 100vh; overflow: hidden; font-family: "Roboto", sans-serif;}
+    .pr-loader {left: 0; top: 0; width: 100%; height: 100%; position: absolute; display: flex; align-items: center; justify-content: center; z-index: 9999; background-color: #202020;}
+    .pr-main-container {width: 100%; height: 100%; margin: 0; padding: 0;}
+    .pr-profile-container {height: 100%; background-color: #202020;}
+    .pr-profile-header {margin: 2.0rem 0.0rem 2.0rem 0.0rem; font-family: "Bree Serif", sans-serif; color: #ffffff;}
+    .pr-profile-image {margin: 2.0rem 0.0rem 2.0rem 0.0rem; border: 2px solid #ffffff; background-image: linear-gradient(-45deg, #14a082 0%, #f0d240 100%);}
+    .pr-profile-biography {margin: 4.0rem 0.0rem 4.0rem 0.0rem;}
+    .pr-profile-biography .title {color: #ffffff;}
+    .pr-profile-biography .subtitle {color: #909090;}
+    .pr-profile-biography a {color: #909090;}
+    .pr-profile-biography a:hover, .pr-profile-biography a:active {color: #ffffff;}
+    .pr-profile-biography p {color: #808080;}
+    .pr-profile-link-icon a {color: #4080ff;}
+    .pr-profile-link-icon a:hover, .pr-profile-link-icon a:active {color: #ffffff;}
+    .pr-profile-copyright {margin: 2.0rem 0.0rem 2.0rem 0.0rem; color: #808080;}
+    .pr-content-container {height: 100%; padding-left: 2.0rem; padding-right: 2.0rem; overflow-x: hidden; overflow-y: auto; background-color: #ffffff;}
+    .pr-content-container::-webkit-scrollbar {width: 10px;}
+    .pr-content-container::-webkit-scrollbar-thumb {background-color: #a0a0a0;}
+    .pr-content-container::-webkit-scrollbar-track {background-color: #e0e0e0;}
+    .pr-content-header {margin: 2.0rem 0.0rem 2.0rem 0.0rem; font-family: "Bree Serif", sans-serif; color: #808080;}
+    .pr-content-research {margin: 2.0rem 0.0rem 2.0rem 0.0rem; max-width: 1200px;}
+    .pr-content-research img {border-radius: 10px;}
+    .pr-content-research p {margin: 0.0rem 0.0rem 0.0rem 2.0rem; max-width: 600px;}
+    .pr-content-research a {color: #4080ff;}
+    .pr-content-research a:hover, .pr-content-research a:active {color: #ff0080;}
+    .pr-content-copyright {margin: 4.0rem 0.0rem 1.0rem 0.0rem; color: #808080;}
+    .pr-location {width: 640px; height: 480px; background-color: #202020;}
+    .pr-location iframe {width: 100%; height: 100%; border: 0;}
+    .pr-breaker {display: inline;}
+    .pr-separator {display: none;}
+    .pr-red-1 {color: #ff0040;}
+    .pr-red-2 {color: #ff0080;}
+    .pr-green {color: #00c080;}
+    .pr-white {color: #909090;}
+    @media (max-width: 768px) {
+      html, body {overflow-x: hidden; overflow-y: auto;}
+      .pr-main-container {height: auto;}
+      .pr-content-research p {margin: 1.0rem 0.0rem 0.0rem 0.0rem; max-width: 100%;}
+      .pr-location {width: 100vw;}
+    }
+    @media (min-width: 370px) and (max-width: 768px), (min-width: 1024px) {
+      .pr-breaker {display: none;}
+      .pr-separator {display: inline;}
+    }
+    @media (max-height: 600px) {
+      .pr-profile-biography {margin: 4.0rem 0.0rem 2.0rem 0.0rem;}
+    }
+  </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168823065-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-168823065-1');
+  </script>
 </head>
 
 <body>
-  <section class="hero is-fullheight">
-    <div class="hero-head">
-      <nav class="navbar">
-        <div class="container">
-          <div class="navbar-brand">
-            <a class="navbar-item" href="#">
-              <span class="icon"><i class="fas fa-code"></i></span>
-              <span><strong>&nbsp;&nbsp;Prasun Roy</strong></span>
-            </a>
-            <span class="navbar-burger burger" id="pr-navbar-burger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </div>
-          <div class="navbar-menu has-text-centered" id="pr-navbar-menu">
-            <div class="navbar-end">
-              <span class="navbar-item">
-                <a class="button is-primary is-rounded" href="#">
-                  <span class="icon"><i class="fas fa-feather"></i></span>
-                  <span><strong>Blog</strong></span>
-                </a>
-              </span>
-            </div>
-          </div>
+  <!-- Loading animation -->
+  <div class="pr-loader">
+    <img src="static/imgs/loader.svg">
+  </div>
+  <!-- Main container -->
+  <div class="columns is-centered pr-main-container">
+    <!-- Profile container -->
+    <div class="column is-4 has-text-centered pr-profile-container">
+      <h1 class="title pr-profile-header">
+        Hello&nbsp; <span class="icon pr-red-1"><i class="fas fa-heart animate__animated animate__pulse animate__infinite"></i></span> &nbsp;World
+      </h1>
+      <figure class="image is-inline-block is-128x128">
+        <img class="is-rounded pr-profile-image" src="static/imgs/profile.png">
+      </figure>
+      <div class="pr-profile-biography">
+        <h1 class="title">Prasun Roy</h1>
+        <h2 class="subtitle">Research Engineer @ CVPR Unit<br><a href="https://www.isical.ac.in" target="_blank">Indian Statistical Institute</a></h2>
+        <p>
+          Computer Vision &nbsp;&bull;&nbsp; Machine Learning<br><br>
+          <span class="icon pr-red-2"><i class="fas fa-map-marker-alt"></i></span>&nbsp;<a onclick="openLocation();">Kolkata, India</a>
+          &nbsp;&bull;&nbsp;
+          <span class="icon pr-green"><i class="fas fa-id-card"></i></span>&nbsp;<a href="static/docs/CV_PrasunRoy.pdf">Résumé</a>
+        </p>
+      </div>
+      <div class="columns is-centered is-mobile pr-profile-link-icon">
+        <div class="column is-2 has-text-centered">
+          <a href="https://github.com/prasunroy"><span class="icon"><i class="fab fa-github fa-2x"></i></span></a>
         </div>
-      </nav>
-    </div>
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <div class="columns is-mobile is-centered">
-          <div class="column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop">
-            <h1 class="title is-size-1-desktop">
-              <span>Hello&nbsp;</span>
-              <span class="icon has-text-danger"><i class="fas fa-heart animated pulse infinite"></i></span>
-              <span>&nbsp;World</span>
-            </h1>
-            <div></div>
-            <h2 class="subtitle is-size-3-desktop">
-              I'm <strong>Prasun Roy</strong>.
-              I'm a Research Engineer <span class="icon has-text-primary"><i class="fas fa-vial"></i></span>
-              at <a href="http://www.isical.ac.in" target="_blank">Indian Statistical Institute</a>,
-              working in the field of Computer Vision & Machine Learning.
-            </h2>
-            <h2 class="subtitle is-size-4-desktop">
-              I'm also an avid gamer and anime lover.
-            </h2>
-          </div>
+        <div class="column is-2 has-text-centered">
+          <a href="https://scholar.google.com/citations?user=n6T5cSsAAAAJ&hl=en"><span class="icon"><i class="fas fa-graduation-cap fa-2x"></i></span></a>
         </div>
-        <div class="columns is-mobile is-centered">
-          <div class="column">
-            <a class="button is-danger is-medium is-rounded is-pulled-right" href="static/etc/CV.pdf" target="_blank">Résumé</a>
-          </div>
-          <div class="column">
-            <a class="button is-dark is-medium is-rounded is-pulled-left" href="mailto:prasunroy.pr@gmail.com">Contact</a>
-          </div>
+        <div class="column is-2 has-text-centered">
+          <a href="https://www.linkedin.com/in/prasunroy"><span class="icon"><i class="fab fa-linkedin fa-2x"></i></span></a>
+        </div>
+        <div class="column is-2 has-text-centered">
+          <a href="https://twitter.com/_prasunroy"><span class="icon"><i class="fab fa-twitter fa-2x"></i></span></a>
         </div>
       </div>
+      <p class="is-hidden-mobile is-size-7 pr-profile-copyright">
+        Copyright<span class="icon pr-white"><i class="far fa-copyright"></i></span>2020 Prasun Roy
+        <span class="pr-breaker"><br></span><span class="pr-separator">&nbsp;&bull;&nbsp;</span>
+        Made with<span class="icon pr-red-2"><i class="fas fa-heart animate__animated animate__jello animate__infinite"></i></span>on Earth
+      </p>
     </div>
-    <div class="hero-foot">
-      <nav class="tabs is-fullwidth">
-        <div class="container has-text-centered">
-          <ul>
-            <li>
-              <span class="icon has-text-dark">
-                <i class="fas fa-chevron-down fa-lg animated heartBeat infinite"></i>
-              </span>
-            </li>
-          </ul>
+    <!-- Content container -->
+    <div class="column is-8 has-text-centered pr-content-container">
+      <h1 class="title has-text-left pr-content-header">Research</h1>
+      <div class="columns is-centered pr-content-research">
+        <div class="column is-4 is-paddingless has-text-left">
+          <figure class="image is-inline-block">
+            <img src="static/imgs/publications/CVPR2020-8915.png">
+          </figure>
         </div>
-      </nav>
-    </div>
-  </section>
-  <footer class="footer has-background-white">
-    <div class="content has-text-centered">
-      <p>
-        <a href="https://www.linkedin.com/in/prasunroy" target="_blank">
-          <span class="has-text-primary pr-social-icon"><i class="fab fa-linkedin fa-2x"></i></span>
-        </a>
-        <a href="https://github.com/prasunroy" target="_blank">
-          <span class="has-text-primary pr-social-icon"><i class="fab fa-github fa-2x"></i></span>
-        </a>
-        <a href="https://scholar.google.com/citations?user=n6T5cSsAAAAJ&hl=en" target="_blank">
-          <span class="has-text-primary pr-social-icon"><i class="fas fa-graduation-cap fa-2x"></i></span>
-        </a>
-        <a href="https://twitter.com/_prasunroy" target="_blank">
-          <span class="has-text-primary pr-social-icon"><i class="fab fa-twitter fa-2x"></i></span>
-        </a>
-      </p>
-      <p class="is-size-7-mobile">
-        Copyright <span><i class="fas fa-copyright"></i></span> 2019 Prasun Roy |
-        Made with <span class="has-text-danger"><i class="fas fa-heart animated jello infinite"></i></span>
-        on Earth.
+        <div class="column is-8 is-paddingless has-text-left">
+          <p class="has-text-justified">
+            <span class="subtitle"><a href="https://prasunroy.github.io/stefann"><b>STEFANN: Scene Text Editor using Font Adaptive Neural Network</b></a></span><br>
+            <strong>Prasun Roy</strong>*, Saumik Bhattacharya*, Subhankar Ghosh*, Umapada Pal<br><br>
+            <em>The IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>) 2020</em><br>
+            <a href="https://prasunroy.github.io/stefann">Project</a>&nbsp;&bull;&nbsp;
+            <a href="static/docs/publications/CVPR2020-8915.pdf">Paper</a>&nbsp;&bull;&nbsp;
+            <a href="https://www.youtube.com/watch?v=HTVQXHPIKKo&list=PLfztDj7uiveWDLqGf41bheERg__t8JWWl">Video</a>&nbsp;&bull;&nbsp;
+            <a href="https://github.com/prasunroy/stefann">Code</a><br><br>
+            In this paper, we propose a generalized method for realistic modification of textual content present in a scene image.
+          </p>
+        </div>
+      </div>
+      <p class="is-hidden-tablet is-size-7 pr-content-copyright">
+        Copyright<span class="icon pr-white"><i class="far fa-copyright"></i></span>2020 Prasun Roy
+        <span class="pr-breaker"><br></span><span class="pr-separator">&nbsp;&bull;&nbsp;</span>
+        Made with<span class="icon pr-red-2"><i class="fas fa-heart animate__animated animate__jello animate__infinite"></i></span>on Earth
       </p>
     </div>
-  </footer>
-  <script type="text/javascript" src="static/js/index.js"></script>
+  </div>
+  <!-- Location modal -->
+  <div class="modal">
+    <div class="modal-background" onclick="closeLocation();"></div>
+    <div class="modal-content">
+      <div class="pr-location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.134269785004!2d88.37482231534977!3d22.64878193587681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89dba10e4e79f%3A0xace4e14eedfce0ec!2sIndian%20Statistical%20Institute!5e0!3m2!1sen!2sin!4v1591512144650!5m2!1sen!2sin" frameborder="0" tabindex="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <button class="modal-close is-large" onclick="closeLocation();"></button>
+  </div>
+  <!-- Custom scripts -->
+  <script type="text/javascript">
+    window.addEventListener("load", () => {
+      const loader = document.querySelector(".pr-loader");
+      loader.classList.add("animate__animated", "animate__fadeOut");
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 1000);
+    });
+    const openLocation = () => {
+      document.querySelector(".modal").classList.add("is-active");
+      document.querySelector(".modal-content").classList.add("animate__animated", "animate__zoomIn", "animate__faster");
+    };
+    const closeLocation = () => {
+      document.querySelector(".modal").classList.remove("is-active");
+      document.querySelector(".modal-content").classList.remove("animate__animated", "animate__zoomIn", "animate__faster");
+    };
+  </script>
 </body>
 
 </html>
