@@ -11,7 +11,7 @@
   <!-- Title -->
   <title>Prasun Roy</title>
   <!-- External resource links -->
-  <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
   <!-- Custom styles -->
   <style type="text/css">
@@ -31,13 +31,15 @@
     .pr-research-logo-container {padding: 16px; width: 20%; vertical-align: middle;}
     .pr-research-logo-img {width: 160px; height: 160px; position: relative;}
     .pr-research-logo-vid {width: 160px; height: 160px; position: absolute; transition: opacity .2s ease-in-out; -moz-transition: opacity .2s ease-in-out; -webkit-transition: opacity .2s ease-in-out;}
+    .pr-research-new-icon {width: 24px; height: 24px;}
+    .pr-research-new-text {color: #ff4040; font-weight: 800;}
     .pr-research-title {font-weight: 800;}
     .pr-research-venue {padding-top: 8px; padding-bottom: 8px;}
     .pr-research-venue-oral {color: #ff4040;}
     .pr-text-center {text-align: center;}
     .pr-zero-padding {padding: 0px;}
     .pr-copyright {font-size: small; text-align: right;}
-    .pr-highlight {background-color: #e0ffcc;}
+    .pr-highlight {background-color: #e0ffc0;}
     .pr-inactive {color: #404040; pointer-events: none;}
     .pr-blink {animation: blinker 1.0s linear infinite;}
     @keyframes blinker {50% {opacity: 0;}}
@@ -118,6 +120,50 @@
               </tr>
             </tbody>
             <tbody>
+              <!------------------------------------------------------------------------------
+              -- DRG-Font: Dynamic Reference-Guided Few-shot Font Generation via
+                 Contrastive Style-Content Disentanglement --
+              ------------------------------------------------------------------------------->
+              <tr onmouseover="drg_start()" onmouseout="drg_stop()">
+                <td class="pr-research-logo-container">
+                  <div class="pr-research-logo-img">
+                    <div class="pr-research-logo-vid" id="drg-logo">
+                      <video width=100% muted autoplay loop>
+                        <!-- <source type="video/mp4" src="static/data/research/chakraborty2026drg/teaser.mp4"> -->
+                      </video>
+                    </div>
+                    <img width=100% src="static/data/research/chakraborty2026drg/teaser.jpg">
+                  </div>
+                  <script type="text/javascript">
+                    function drg_start() {
+                      document.getElementById("drg-logo").style.opacity = "1";
+                    }
+                    function drg_stop() {
+                      document.getElementById("drg-logo").style.opacity = "0";
+                    }
+                    drg_stop();
+                  </script>
+                </td>
+                <td class="pr-research-info-container">
+                  <img class="pr-research-new-icon" src="static/assets/fire.gif"><span class="pr-research-new-text">(NEW!)</span>
+                  <a href="https://arxiv.org/abs/2604.13797"><span class="pr-research-title">DRG-Font: Dynamic Reference-Guided Few-shot Font Generation via Contrastive Style-Content Disentanglement</span></a>
+                  <br>
+                  <a href="https://scholar.google.com/citations?user=b9zGGygAAAAJ&hl=en">Rejoy Chakraborty</a>,
+                  <strong>Prasun Roy</strong>,
+                  <a href="https://scholar.google.com/citations?user=8pffuA4AAAAJ&hl=en">Saumik Bhattacharya</a>,
+                  <a href="https://scholar.google.com/citations?user=2_z_CogAAAAJ&hl=en">Umapada Pal</a>
+                  <div class="pr-research-venue">
+                    <em>arXiv</em>, 2026
+                  </div>
+                  <a href="https://rejoycs.github.io/drg-font">Project Page</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/rejoycs/drg-font">Code</a> &nbsp;/&nbsp;
+                  <a href="https://arxiv.org/abs/2604.13797">arXiv</a> &nbsp;/&nbsp;
+                  <a href="static/data/research/chakraborty2026drg/bibtex.bib">BibTex</a>
+                  <p>
+                    We introduce a few-shot font generation strategy that learns complex glyph attributes by decomposing style and content embedding spaces.
+                  </p>
+                </td>
+              </tr>
               <!------------------------------------------------------------------------------
               -- Exploring Mutual Cross-Modal Attention for Context-Aware Human Affordance
                  Generation --
